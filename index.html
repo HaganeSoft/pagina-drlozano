@@ -5,43 +5,44 @@
 	<link href="css/app.css" rel="stylesheet">
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 	<script src="https://use.fontawesome.com/86c3415782.js"></script>
+	<script src="js/jquery-3.1.0.js"></script>
 	<title>Dr. César Lozano</title>
 </head>
 <body>
 	<nav class="nav">
-	    <a class="logo" href="#">
+	    <a id="logo" href="#">
 	      <img src="img/logo.png" alt="logo">
 	    </a>
 
-	  <span class="nav-toggle">
-	    <span></span>
-	    <span></span>
-	    <span></span>
-	  </span>
+		<span class="nav-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</span>
 
-	  <div class="nav-right nav-menu">
-	    <a class="nav-item" href="#">
-	      Inicio
-	    </a>
-	    <a class="nav-item" href="#">
-	      Experiencia
-	    </a>
-	    <a class="nav-item" href="#">
-	      Endocrinología
-	    </a>
-	    <a class="nav-item" href="#">
-	      Contacto
-	    </a>
-	  </div>
+		<div class="nav-right nav-menu">
+			<a class="nav-item inicio-btn" href="#">
+			  Inicio
+			</a>
+			<a class="nav-item experiencia-btn" href="#">
+			  Experiencia
+			</a>
+			<a class="nav-item endocrinologia-btn" href="#">
+			  Endocrinología
+			</a>
+			<a class="nav-item contacto-btn" href="#">
+			  Contacto
+			</a>
+		</div>
 	</nav>
-	<section id="acerca">
+	<section id="inicio">
 		<section class="hero">
 			<img src="img/hero.png" alt="">
 		</section>
 		<div class="columns white-fill">
 			<div class="column is-5 is-offset-1">
 				<h3 class="subtitle is-3 blue-font">ACERCA DEL <span class="bold">DOCTOR</span></h3>
-				<p>El doctor César Lozano cuenta con 30 años de experiencia y un extenso currículum en el área de endocrinologóa.</p>
+				<p>El doctor César Lozano cuenta con 30 años de experiencia y un extenso currículum en el área de endocrinología.</p>
 				<br>
 				<p>Miembro de más de 10 sociedades médicas, autor de varias publicaciones y conferencista en importantes congresos nacionales e internacionales</p>
 			</div>
@@ -80,7 +81,7 @@
 		        <span class="bold">Experiencia</span>
 		      </h1>
 		      <h2 class="subtitle">
-		        <a href="#">Inicio</a> > Experiencia
+		        <span class="inicio-btn">Inicio</span> > Experiencia
 		      </h2>
 		    </div>
 		  </div>
@@ -465,7 +466,7 @@
 		        <span class="bold">Endocrinología</span>
 		      </h1>
 		      <h2 class="subtitle">
-		        <a href="#">Inicio</a> > Endocrinología
+		        <span class="inicio-btn">Inicio</span> > Endocrinología
 		      </h2>
 		    </div>
 		  </div>
@@ -537,32 +538,39 @@
 		        <span class="bold">Contacto</span>
 		      </h1>
 		      <h2 class="subtitle">
-		        <a href="#">Inicio</a> > Contacto
+		        <span class="inicio-btn">Inicio</span> > Contacto
 		      </h2>
 		    </div>
 		  </div>
 		</section>
-		<div class="white-fill">
+		<div id="post-mensaje" class="hidden">
+			<div class="container column is-10 is-offset-1">
+				<p>Tus datos han sido enviados.</p>
+				<p>Nos contactaremos contigo a la brevedad.</p>
+			</div>
+		</div>
+
+		<div id="pre-mensaje" class="white-fill">
 			<div class="info column is-10 is-offset-1">
 				<p>El Dr. Lozano con gusto te proporcionará el mejor tratamiento para cualquier que sea tu caso buscando tu satisfacción personal. Utiliza este medio para solicitar algún servicio o información que sea de tu interés.</p>
 			</div>
 			<div class="columns gray-fill">
 				<div class="column is-5 is-offset-1">
-					<form class="form" action="https://formspree.io/alejandro.valdesval@gmail.com" method="POST">
+					<form id="contactform" class="form" action="" method="POST">
 						<div class="control is-horizontal">
 							<div class="control-label">
 								<label class="label">Nombre</label>
 							</div>
 							<div class="control">
-								<input class="input" type="text" placeholder="José Martínez Acosta" name="name">
+								<input id="name-msg" class="input" type="text" placeholder="José Martínez Acosta" name="name">
 							</div>
 						</div>
 						<div class="control is-horizontal">
 							<div class="control-label">
-								<label class="label">Telefono</label>
+								<label class="label">Teléfono</label>
 							</div>
 							<div class="control">
-								<input class="input" type="tel" placeholder="83 65 42 15" name="name">
+								<input id="tel-msg" class="input" type="tel" placeholder="83 65 42 15" name="tel">
 							</div>
 						</div>
 						<div class="control is-horizontal">
@@ -570,7 +578,7 @@
 								<label class="label">Email</label>
 							</div>
 							<div class="control">
-								<input class="input" type="text" placeholder="jose_macosta@gmail.com" name="_replyto">
+								<input id="mail-msg" class="input" type="text" placeholder="jose_macosta@gmail.com" name="_replyto">
 							</div>
 						</div>
 						<div class="control is-horizontal">
@@ -578,11 +586,11 @@
 								<label class="label">Mensaje</label>
 							</div>
 							<div class="control">
-								<textarea class="textarea" placeholder="Escribe tu mensaje..." name="comment"></textarea>
+								<textarea id="msg" class="textarea" placeholder="Escribe tu mensaje..." name="comment"></textarea>
 							</div>
 						</div>
 						<p class="control is-pulled-right">
-							<button class="button is-success">Enviar datos</button>
+							<button id="sendMessage" class="button is-success">Enviar datos</button>
 						</p>
 					</form>
 				</div>
@@ -620,31 +628,100 @@
 </html>
 
 <script>
-	var app = new Vue({
-		el: '#tabs',
-		data: {
-			showEdu: false,
-			showSociety: false,
-			showExp: false,
-			showPub: false,
-			showCur: false
-		},
-        methods: {
-			toggleShowEdu(){
-				this.showEdu = !this.showEdu;
-			},       	
-			toggleShowSociety(){
-				this.showSociety = !this.showSociety;
-			},       		
-			toggleShowExp(){
-				this.showExp = !this.showExp;
+
+ 	$(document).ready(function(){
+ 		$("#sendMessage").on("click", function() {
+		    $.ajax({
+		        url: "https://formspree.io/alejandro.valdesval@gmail.com", 
+		        method: "POST",
+		        data: {
+		        	nombre: $("#name-msg").val(),
+		        	telefono: $("#tel-msg").val(),
+		        	email: $("#mail-msg").val(),
+		        	mensaje: $("#msg").val()	,
+		        },
+		        dataType: "json"
+		    });
+
+		    $("#post-mensaje").removeClass("hidden");
+		    $("#pre-mensaje").addClass("hidden");
+		    return false;
+		});
+
+        function scrollTo(section){
+        	var offset = section.offset().top - 75;
+            $('html,body').animate({
+                scrollTop: offset},
+                'slow');
+        };
+
+        function hideMenu(){
+            var nav = $('#nav-bar');
+            nav.removeClass('is-active');
+        };
+
+        $('.nav-toggle').click(function(e){
+            var nav = $('#nav-bar');
+            if(nav.hasClass('is-active')){
+                nav.removeClass('is-active');   
+            }
+            else{
+                nav.addClass('is-active');
+            }
+        });
+
+        $('.inicio-btn').click(function(e){
+            e.preventDefault();
+            scrollTo($('#inicio'));
+            hideMenu();
+        });
+        $('.experiencia-btn').click(function(e){
+            e.preventDefault();
+            scrollTo($('#experiencia'));
+            hideMenu();
+        });
+        $('.endocrinologia-btn').click(function(e){
+            e.preventDefault();
+            scrollTo($('#endocrinologia'));
+            hideMenu();
+        });
+        $('.contacto-btn').click(function(e){
+            e.preventDefault();
+            scrollTo($('#contacto'));
+            hideMenu();
+        });
+        $('#logo').click(function(e){
+            e.preventDefault();
+            scrollTo($('#inicio'));
+            hideMenu();
+        });
+
+		var app = new Vue({
+			el: '#tabs',
+			data: {
+				showEdu: false,
+				showSociety: false,
+				showExp: false,
+				showPub: false,
+				showCur: false
 			},
-			toggleShowPub(){
-				this.showPub = !this.showPub;
-			},
-			toggleShowCur(){
-				this.showCur = !this.showCur;
-			},
-        }
+	        methods: {
+				toggleShowEdu(){
+					this.showEdu = !this.showEdu;
+				},       	
+				toggleShowSociety(){
+					this.showSociety = !this.showSociety;
+				},       		
+				toggleShowExp(){
+					this.showExp = !this.showExp;
+				},
+				toggleShowPub(){
+					this.showPub = !this.showPub;
+				},
+				toggleShowCur(){
+					this.showCur = !this.showCur;
+				},
+	        }
+		});
 	});
 </script>

@@ -3918,8 +3918,9 @@ a.panel-block:hover {
 
 .nav {
   position: fixed;
-  width: 100%; }
-  .nav .logo {
+  width: 100%;
+  height: 75px; }
+  .nav #logo {
     position: relative;
     left: 8.33%; }
   .nav .nav-right {
@@ -3961,3 +3962,9 @@ a.panel-block:hover {
   cursor: pointer; }
   .tab-closed .toggle {
     color: #247185; }
+
+.inicio-btn {
+  cursor: pointer; }
+
+.hidden {
+  visibility: hidden; }
