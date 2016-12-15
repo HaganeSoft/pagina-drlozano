@@ -36,7 +36,7 @@ $success: $darkblue;
 }
 
 #contacto{
-	margin-bottom:30px;
+	margin-bottom:50px;
 }
 
 .hero-body{
@@ -112,5 +112,29 @@ $success: $darkblue;
 }
 
 .hidden{
-	visibility: hidden;
+	display: none;
 }
+
+.nav-toggle{
+	width: 75px;
+	height: 75px;
+	position: fixed;
+	right: 0;
+}
+
+@media (max-width: 768px) {
+	.hero{
+		img{
+			margin-top: 75px;
+		}
+	}
+	.nav .nav-right{
+		position: absolute;
+		right: 0;
+	}
+
+	p,h1,h2,h3,h4,h5,li,label,input,a{
+		padding: 0 15px 0 15px;
+	}
+}
+

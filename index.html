@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/app.css" rel="stylesheet">
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 	<script src="https://use.fontawesome.com/86c3415782.js"></script>
@@ -10,9 +12,11 @@
 </head>
 <body>
 	<nav class="nav">
-	    <a id="logo" href="#">
-	      <img src="img/logo.png" alt="logo">
-	    </a>
+		<div class="nav-left">	
+		    <a id="logo" href="#">
+		      <img src="img/logo.png" alt="logo">
+		    </a>
+		</div>
 
 		<span class="nav-toggle">
 			<span></span>
@@ -20,17 +24,17 @@
 			<span></span>
 		</span>
 
-		<div class="nav-right nav-menu">
-			<a class="nav-item inicio-btn" href="#">
+		<div id="nav-bar" class="nav-right nav-menu">
+			<a class="nav-item inicio-btn" href="#inicio">
 			  Inicio
 			</a>
-			<a class="nav-item experiencia-btn" href="#">
+			<a class="nav-item experiencia-btn" href="#experiencia">
 			  Experiencia
 			</a>
-			<a class="nav-item endocrinologia-btn" href="#">
+			<a class="nav-item endocrinologia-btn" href="#endocrinologia">
 			  Endocrinología
 			</a>
-			<a class="nav-item contacto-btn" href="#">
+			<a class="nav-item contacto-btn" href="#contacto">
 			  Contacto
 			</a>
 		</div>
@@ -41,7 +45,7 @@
 		</section>
 		<div class="columns white-fill">
 			<div class="column is-5 is-offset-1">
-				<h3 class="subtitle is-3 blue-font">ACERCA DEL <span class="bold">DOCTOR</span></h3>
+				<h3 class="subtitle is-3">ACERCA DEL <span class="bold">DOCTOR</span></h3>
 				<p>El doctor César Lozano cuenta con 30 años de experiencia y un extenso currículum en el área de endocrinología.</p>
 				<br>
 				<p>Miembro de más de 10 sociedades médicas, autor de varias publicaciones y conferencista en importantes congresos nacionales e internacionales</p>
@@ -49,7 +53,7 @@
 			<div class="column">
 				<div class="dark-gray-fill padding-left">
 					<h3 class="subtitle is-3 gray-font">VIDEOS <span class="bold">RELACIONADOS</span></h3>
-					<div class="video columns">
+					<div class="video columns is-mobile">
 						<div class="column is-3 thumbnail">
 							<a href="">
 								<img src="img/video1.png" alt="">
@@ -59,7 +63,7 @@
 							<p>Medicina Antienvejecimiento</p>
 						</div>
 					</div>
-					<div class="video columns">
+					<div class="video columns is-mobile">
 						<div class="column is-3 thumbnail">
 							<a href="">
 								<img src="img/video2.png" alt="">
@@ -473,11 +477,10 @@
 		</section>
 		<div class="columns white-fill">
 			<div class="column is-10 is-offset-1">
-				<p>La endocrinología es la rama de la medicina que estudia y trata los problemas hormnoales, así como los trastornos del metabolismo y de las glándulas de secreción interna, incluyendo padeciminetos hereditarios, congénitos (de nacimiento) y adquiridos durante el crecimiento y desarrollo del organísmo humano.</p>
+				<p>La endocrinología es la rama de la medicina que estudia y trata los problemas hormonales, así como los trastornos del metabolismo y de las glándulas de secreción interna, incluyendo padecimientos hereditarios, congénitos (de nacimiento) y adquiridos durante el crecimiento y desarrollo del organismo humano.</p>
 				<br>
-				<p>Es una especialidad que con el paso del tiempo ha generado un lugar preponderante, ya que cada vez se descubren nuevas y fascinantes hormonas, que se porducen en órganos no catalogados como glándulas y que actúan en todas partes del cuerpo humano, incluso con acciones y efectos a distancia, dado que estas hormonas se producen en un sitio y actúan en otros órganos y sistemas.
+				<p>Es una especialidad que con el paso del tiempo ha generado un lugar preponderante, ya que cada vez se descubren nuevas y fascinantes hormonas, que se producen en órganos no catalogados como glándulas y que actúan en todas partes del cuerpo humano, incluso con acciones y efectos a distancia, dado que estas hormonas se producen en un sitio y actúan en otros órganos y sistemas.
 				</p>
-
 				<h5 class="subtitle is-5 blue-font">PADECIMIENTOS QUE TRATA</h5>
 				<ul>
 					<li>Diabetes</li>
@@ -492,18 +495,18 @@
 		<div class="columns gray-fill">
 			<div class="column is-5 is-offset-1">
 				<h5 class="subtitle is-5 blue-font">¿CON QUÉ OTRAS ESPECIALIDADES SE RELACIONA?</h5>
-				<p>Está intimamente relacionada a todas las demás especialidades y ramas de la medicina, ya que el papel que juegan las hormonas está presente en el metabolismo y en el desarrollo de todas las etapas del ser humano: concepción, vida embrionaría y fetal, lactancía, infancía, adolescencía, adultez, reproducción, embarazo, tercera edad y vejez.</p>
+				<p>Está íntimamente relacionada a todas las demás especialidades y ramas de la medicina, ya que el papel que juegan las hormonas está presente en el metabolismo y en el desarrollo de todas las etapas del ser humano: concepción, vida embrionaria y fetal, lactancia, infancia, adolescencia, adultez, reproducción, embarazo, tercera edad y vejez.</p>
 				<br>
 
 				<h5 class="subtitle is-5 blue-font">NUTRICIÓN</h5>
 				<p>La obesidad es un imán para las enfermedades crónico-degenerativas como: diabetes, hipertensión arterial, aterosclerosis, aumento de las grasas y colesterol en la sangre, hernias, cálculos en la vesícula biliar, embolias, infartos al corazón, entre otras.</p>
 				<br>
-				<p>Trastornos hormonales o endorcrinológicos podrían estar impidiendo el descenso de peso adecuado, por lo que la evaluación endocrinológica especializada es importante al inicio o durante el tratamiento de la obesidad.</p>
+				<p>Trastornos hormonales o endocrinológicos podrían estar impidiendo el descenso de peso adecuado, por lo que la evaluación endocrinológica especializada es importante al inicio o durante el tratamiento de la obesidad.</p>
 			</div>
 			<div class="column dark-gray-fill">
 				<div class="padding-left">
 					<h3 class="subtitle is-3 gray-font">VIDEOS <span class="bold">RELACIONADOS</span></h3>
-					<div class="video columns">
+					<div class="video columns is-mobile">
 						<div class="column is-3 thumbnail">
 							<a href="">
 								<img src="img/video1.png" alt="">
@@ -513,7 +516,7 @@
 							<p>Medicina Antienvejecimiento</p>
 						</div>
 					</div>
-					<div class="video columns">
+					<div class="video columns is-mobile">
 						<div class="column is-3 thumbnail">
 							<a href="">
 								<img src="img/video2.png" alt="">
@@ -549,7 +552,6 @@
 				<p>Nos contactaremos contigo a la brevedad.</p>
 			</div>
 		</div>
-
 		<div id="pre-mensaje" class="white-fill">
 			<div class="info column is-10 is-offset-1">
 				<p>El Dr. Lozano con gusto te proporcionará el mejor tratamiento para cualquier que sea tu caso buscando tu satisfacción personal. Utiliza este medio para solicitar algún servicio o información que sea de tu interés.</p>
@@ -596,7 +598,7 @@
 				</div>
 				<div class="column dark-gray-fill">
 					<h3 class="subtitle is-3 gray-font">INFORMACIÓN DE <span class="bold">CONTACTO</span></h3>
-					<div class="columns">
+					<div class="columns is-mobile">
 						<div class="column is-2 is-offset-1">
 							<p><span class="bold">Dirección:</span></p>
 						</div>
@@ -607,7 +609,7 @@
 							<p>Monterrey, N.L.</p>
 						</div>
 					</div>
-					<div class="columns">
+					<div class="columns is-mobile">
 						<div class="column is-2 is-offset-1">
 							<p><span class="bold">Teléfono:</span></p>
 						</div>
