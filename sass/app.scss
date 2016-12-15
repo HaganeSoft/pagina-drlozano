@@ -1,0 +1,107 @@
+$primary: #8DE5F1;
+$darkblue: #2B6383;
+$bluefont: #247185;
+$gray: #F9F7F9;
+$darkgray: #E9E7E9;
+$white: #fff;
+$success: $darkblue;
+
+// Bulma
+@import 'node_modules/bulma/bulma';
+
+.dark-gray-fill{
+	background-color: $darkgray;
+}
+
+.gray-fill{
+	background-color: $gray;
+}
+
+.white-fill{
+	background-color: $white;
+}
+
+.subtitle, .form{
+	padding-top: 2%;
+}
+
+.footer{
+	background-color: $darkblue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    color: white;
+}
+
+#contacto{
+	margin-bottom:30px;
+}
+
+.hero-body{
+	.container{
+		margin-left: 8.33%;
+	}
+}
+
+.nav{
+	position: fixed;
+	width: 100%;
+	.logo{
+		position: relative;
+		left: 8.33%
+	}
+	.nav-right{
+		position: relative;
+		right: 8.33%;
+		a{
+			color: $bluefont;
+		}
+	}
+}
+
+.columns.white-fill, .columns.gray-fill{
+	margin-bottom: 0;
+}
+
+.hero-body{
+	padding: 20px 10px;
+}
+
+.hero.is-primary{
+	.title{
+		color: $bluefont;
+	}
+	.subtitle{
+		color: $bluefont;
+	}
+}
+
+.info{
+	padding-top: 2%;
+	padding-bottom: 4%;
+}
+
+.blue-font{
+	color: $bluefont;
+}
+
+.bold{
+	font-weight: bold !important;
+}
+
+.padding-left{
+	padding-left: 4%;
+}
+
+.tab-closed{
+	background-color: $darkgray;
+	border-radius: 1%;
+	margin: 8px;
+	font-weight: bold;
+	cursor:pointer;
+	.toggle{
+		color: $bluefont;
+	}
+}

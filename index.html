@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/app.css" rel="stylesheet">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://use.fontawesome.com/86c3415782.js"></script>
+	<title>Dr. César Lozano</title>
+</head>
+<body>
+	<nav class="nav">
+	    <a class="logo" href="#">
+	      <img src="img/logo.png" alt="logo">
+	    </a>
+
+	  <span class="nav-toggle">
+	    <span></span>
+	    <span></span>
+	    <span></span>
+	  </span>
+
+	  <div class="nav-right nav-menu">
+	    <a class="nav-item" href="#">
+	      Inicio
+	    </a>
+	    <a class="nav-item" href="#">
+	      Experiencia
+	    </a>
+	    <a class="nav-item" href="#">
+	      Endocrinología
+	    </a>
+	    <a class="nav-item" href="#">
+	      Contacto
+	    </a>
+	  </div>
+	</nav>
+	<section id="acerca">
+		<section class="hero">
+			<img src="img/hero.png" alt="">
+		</section>
+		<div class="columns white-fill">
+			<div class="column is-5 is-offset-1">
+				<h3 class="subtitle is-3 blue-font">ACERCA DEL <span class="bold">DOCTOR</span></h3>
+				<p>El doctor César Lozano cuenta con 30 años de experiencia y un extenso currículum en el área de endocrinologóa.</p>
+				<br>
+				<p>Miembro de más de 10 sociedades médicas, autor de varias publicaciones y conferencista en importantes congresos nacionales e internacionales</p>
+			</div>
+			<div class="column">
+				<div class="dark-gray-fill padding-left">
+					<h3 class="subtitle is-3 gray-font">VIDEOS <span class="bold">RELACIONADOS</span></h3>
+					<div class="video columns">
+						<div class="column is-3 thumbnail">
+							<a href="">
+								<img src="img/video1.png" alt="">
+							</a>
+						</div>
+						<div class="column is-3 videotitle">
+							<p>Medicina Antienvejecimiento</p>
+						</div>
+					</div>
+					<div class="video columns">
+						<div class="column is-3 thumbnail">
+							<a href="">
+								<img src="img/video2.png" alt="">
+							</a>
+						</div>
+						<div class="column is-3 videotitle">
+							<p>Hormona de Crecimiento en Adultos</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="experiencia">
+		<section class="hero is-primary">
+		  <div class="hero-body">
+		    <div class="container">
+		      <h1 class="title">
+		        <span class="bold">Experiencia</span>
+		      </h1>
+		      <h2 class="subtitle">
+		        <a href="#">Inicio</a> > Experiencia
+		      </h2>
+		    </div>
+		  </div>
+		</section>
+		<div class="columns is-multiline">
+			<div class="column is-10 is-offset-1">
+				<p>El doctor César Lozano cuenta con 30 años de experiencia y un extenso currículum en el área de endocrinología.
+				</p>
+				<br>
+				<p>Miembro de más de 10 sociedades médicas, autor de varias publicaciones y conferencista en importantes congresos nacionales e internacionales
+				</p>
+				<br>
+				<p>A continuación podrás leer a detalle su experiencia</p>
+			</div>
+			<div id="tabs" class="column is-12">
+				<div class="column is-10 is-offset-1 tab-closed">
+					<div class="toggle" v-on:click='toggleShowEdu()'>
+						EDUCACIÓN<span class="is-pulled-right"><i v-bind:class="[showEdu ? 'fa-minus' : 'fa-plus', 'fa' ]"></i></span>
+					</div>
+					<div class="tab-info columns is-multiline" v-if='showEdu'>
+						<div class="column is-2 is-offset-2 bold">Preparatoria:</div>
+						<div class="column is-7">
+							<p>
+								Preparatoria No. 2, U.A.N.L. (1975-1977)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Carrera:</div>
+						<div class="column is-7">
+							<p>
+								Médico Cirujano y Partero, Facultad de Medicina, U.A.N.L. (1977-1984)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Servicio Social:</div>
+						<div class="column is-7">
+							<p>
+								Internado en el Hospital de los Maestros, Sección 50, S.N.T.E. (1983-1984)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Post-Grado:</div>
+						<div class="column is-7">
+							<p>
+								Residencia en la Especialidad de Medicina Interna
+								<br>
+								Residencia en la Especialidad de Endocrinología y Metabolismo (1985-1991)
+								<br>
+								Residencia en Medicina Interna, Hospital Regional de Especialidades No. 25 Monterrey N.L., México. (1985 - 1988)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Certificado:</div>
+						<div class="column is-7">
+							<p>
+								Consejo Mexicano de Medicina Interna (1988)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Residencia:</div>
+						<div class="column is-7">
+							<p>
+								Endocrinología en el Hospital Universitario, U.A.N.L.
+								<br>
+								Con Rotación en la Unidad Metabolice del Departamento de Biología de la Reproducción
+								del Instituto Nacional de la Nutrición Salvador Zubiran INNSZ, durante el periodo
+								comprendido del 2 de Enero al 28 de Febrero de 1990, México D.F. (1988-1990)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Fellowship:</div>
+						<div class="column is-7">
+							<p>
+								Diabetes y Endocrinología, Mount Sinai Hospital, Universidad de Toronto, Ontario,
+								CANADA (1990 - 1991)
+								<br>
+								Certificado por el Consejo Mexicano de Endocrinología, Acapulco, Gro. (1992)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Distinciones Académicas:</div> 
+						<div class="column is-7">
+							<p>
+								Mención Honorifica en el Examen Profesional (Carrera)
+								<br>
+								Seleccionado por la International Diabetes Federation con otorgamiento de beca para
+								estudios de Post-grado en Diabetes, con duración de un Año, en la Universidad de Toronto, Ontario, CANADA.
+								<br>
+								Seleccionado por la Subsecretaria de Educación Superior e Investigación Científica
+								de la S.E.P. con otorgamiento de beca para estudios de Post-grado en Diabetes, con
+								duración de un Año, en la Universidad de Toronto, Ontario, CANADA.
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Exámenes Internacionales:</div>
+						<div class="column is-7">
+							<p>
+								Foreign Medical Graduate Examination in the Medical Sciences from U.S.A. (1984)
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column is-10 is-offset-1 tab-closed">
+					<div class="toggle" v-on:click='toggleShowSociety'>
+						SOCIEDADES MÉDICAS<span class="is-pulled-right"><i v-bind:class="[showSociety ? 'fa-minus' : 'fa-plus', 'fa' ]"></i></span>
+					</div>
+					<div class="tab-info columns is-multiline" v-if='showSociety'>
+						<div class="column is-2 is-offset-2 bold">Miembro de:</div>
+						<div class="column is-7">
+							<p>
+								International Diabetes Federation<br>
+								American Diabetes Association<br> 
+								Canadian Diabetes Association<br>
+								Asociación Mexicana de Diabetes<br>
+								Thyroid Foundation of CANADA <br>
+								Cuerpo Médico del Hospital San José de Monterrey<br>
+								Sociedad Medica del Noreste<br>
+								Cuerpo Médico del Hospital José A. Muguerza, S.A. <br>
+								Asociación de Medicina Interne de México A.C. (A.M.I.M.)<br>
+								Asociación de Medicina Interne de Nuevo León A.C.<br>
+								Sociedad Mexicana de Nutrici6n y Endocrinología<br>
+								Sociedad de Residentes y Ex-residentes del Hospital Universitario "Dr. José González",
+								U.A.N.L. Monterrey, N.L.<br>
+								Asociación Mexicana para el estudio del Climaterio, Capitulo Noreste<br>
+							</p>
+						</div>
+						<div class="column is-2 is-offset-2 bold">Secretario de:</div>
+						<div class="column is-7">
+							<p>
+								Asociación Mexicana para el Estudio del Climaterio, Capitulo Noreste (1992 - 1994)<br>
+								Sociedad Mexicana de Nutrición y Endocrinología, Capitulo Noreste (1993)<br>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column is-10 is-offset-1 tab-closed">
+					<div class="toggle" v-on:click='toggleShowExp'>
+						EXPERIENCIA EN DOCENIA<span class="is-pulled-right"><i v-bind:class="[showExp ? 'fa-minus' : 'fa-plus', 'fa' ]"></i></span>
+					</div>
+					<div class="tab-info columns is-multiline" v-if='showExp'>
+						<div class="column is-2 is-offset-2 bold">Instructor de:</div>
+						<div class="column is-7">
+							<p>
+								Microbiología en la Facultad de Medicina. U.A.N.L. (1980 -1993)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Conferencista en:</div>
+						<div class="column is-7">
+							<p>
+								Simposium "Lipoproteínas y Aterosclerosis" Hospital Universitario, N.L. (1985)<br>
+								Curso de Diabetes Mellitus. Facultad de Medicina, Universidad Autónoma de Coahuila.
+								(1989)<br>
+								Curso de Diabetes Mellitus. Hospital General, Universidad Autónoma de Tamaulipas.
+								(1989)<br>
+								Curso de Endocrinología Clínica Aplicada. Organizado conjuntamente por la Sociedad
+								Mexicana de Nutrición y Endocrinología y por el Servicio de Endocrinología del Hospital
+								Universitario "Dr. José E. González" de la U.A.N.L. Monterrey, N.L. (1989)<br>
+								Simposium sobre la Tercera Edad, organizado por el DIF Guadalupe. (1991)<br>
+								Curso sobre Diabetes para Medicina Familiar. Organizado por el I.M.S.S.y la
+								Universidad de Monterrey (UDEM) en la Clínica 26 del I.M.S.S. (1992)<br>
+								Curso Monográfico: "Diabetes Mellitus en Medicina Familiar". Unidad de Medicina
+								Familiar No. 5 del IMSS (1992)<br>
+								Curso Monográfico: "Diabetes Mellitus en Medicina Familiar". Unidad de Medicina
+								Familiar No. 26 del IMSS (1992)<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Profesor de:</div>
+						<div class="column is-7">
+							<p>
+								Catedra de Endocrinología y Metabolismo, Facultad de Medicina de la Universidad de
+								Monterrey (UDEM) (1992- a la fecha)<br>
+								"V Congreso Internacional Metabolismo y Obesidad, Monterrey 2002" con el Tema "Indicaciones de algunos Fármacos en el Paciente Diabético" realizado en el Hotel Crowne Plaza (2002)<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Director Medico (Endocrinólogo):</div>
+						<div class="column is-7">
+							<p>
+								Campamento de verano para Niños Diabéticos, organizado por la Asociación Mexicana de Diabetes de Nuevo León (1992)
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column is-10 is-offset-1 tab-closed">
+					<div class="toggle" v-on:click='toggleShowPub'>
+						PUBLICACIONES<span class="is-pulled-right"><i v-bind:class="[showPub ? 'fa-minus' : 'fa-plus', 'fa' ]"></i></span>
+					</div>
+					<div class="tab-info columns is-multiline" v-if='showPub'>
+						<div class="column is-2 is-offset-2 bold">Memorias:</div>
+						<div class="column is-7">
+							<p>
+								Memorias del VI Encuentro Regional de Investigación Biomédica.<br>
+								Tema: Síndrome de Regresión Testicular Embriogénica (SRTE) (ANORQUIA), en un Sujeto
+								don Cariotipo 46XY e Hipogonadismo Hipogonadotropico (HH). Página 134.<br>
+								Fecha: Octubre de 1988.<br>
+								Lugar: Facultad de Medicine U.A.N.L. Monterrey N.L.<br>
+								Publicado también en las Memorias de XXVIII Reuni6n Anual de la Sociedad Mexicana de
+								Nutrición y Endocrinología, Pagina 65. Noviembre de 1988.Guanajuato, Gato., México.<br>
+								<br>
+								Memorias del VII Encuentro Regional de Investigación Biomédica.<br>
+								Tema: Estudio Clínico y de Laboratorio de un Paciente de 10 días de Nacido, con
+								Ambigüedad de Genitales Externos y con el Síndrome de Varón) (X (SV-XX). Página 200.<br>
+								Fecha: Octubre de 1989.<br>
+								Lugar: Facultad de Medicina UA.N.L. Monterrey N.L.<br>
+								Publicado también en las memorias de la XXIX Reunión Anual de la Sociedad Mexicana de
+								Nutrición y Endocrinología. Página 35. Noviembre de 1989. Acapulco, Gro., México.<br>
+								<br>
+								Memorias del VII Encuentro Regional de Investigación Biomédica.<br>
+								Tema: Criptorquidismo (CRIPT) asociado a Hipogonadismo Hi pogonadotropico (HH) de
+								origen Hipotalamico en dos hermanos. Página 151.<br>
+								Fecha: Octubre de 1989.<br>
+								Lugar: Facultad de Medicina U.A.N.L. Monterrey N.L.<br>
+								Publicado también en las memorias de la XXIX de Nutrición y Endocrinología. Pagina
+								103. Noviembre de 1989. Acapulco, Gro., México.<br>
+
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Tesis:</div>
+						<div class="column is-7">
+							<p>
+								Praziquantel en el Tratamiento de la Neurocisticercosis Active. (Por ser publicado)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Trabajo de investigación</div>
+						<div class="column is-7">
+							<p>
+								Cetoacidosis Diabética en el Hospital 25, I.M.S.S. Monterrey N.L., México.<br>
+								Epidemiologia, prevalencia, incidencia, factores pronósticos y mortalidad.<br>
+								Trabajo de investigación presentado en el XV Congreso de la Federación Internacional de
+								Diabetes, efectuado del 6 al 11 de Noviembre de 1994 en la ciudad de Kobe, Japón.<br>
+								Publicado en las memorias del Congreso.<br>
+								<br>
+								Coma Hiperosmolar Hiperglucemico No Cetosico, Experiencia Clínica en el Hospital 25
+								I.M.S.S. Monterrey, N.L. México.<br>
+								Trabajo de Investigación presentado en el XVI Congreso de la Federación Internacional de
+								Diabetes, efectuado del 20 al 25 de Julio de 1997 en la ciudad de Helsinki, Finlandia.<br>
+								Publicado en las memorias del Congreso.<br>
+								<br>
+								Cetoacidosis Diabética en el Departamento de Endocrinología, Hospital 25 I.M.S.S.,
+								Monterrey, N.L. México.<br>
+								Trabajo de Investigación presentado en el XVI Congreso de la Federación Internacional de
+								Diabetes, efectuado del 20 al 25 de Julio de 1997 en la ciudad de Helsinki, Finlandia.<br>
+								Publicado en las memorias del Congreso.<br>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column is-10 is-offset-1 tab-closed">
+					<div class="toggle" v-on:click='toggleShowCur'>
+						CURSOS Y SEMINARIOS<span class="is-pulled-right"><i v-bind:class="[showCur ? 'fa-minus' : 'fa-plus', 'fa' ]"></i></span>
+					</div>
+					<div class="tab-info columns is-multiline" v-if='showCur'>
+						<div class="column is-2 is-offset-2 bold">Cursos:</div>
+						<div class="column is-7">
+							<p>
+								Reanimación Cardiopulmonar, certificado por la American Heart Association.
+								Facultad de Medicina UA.N.L. (1981 - 1982)<br>
+								<br>
+								Curso de Inglés (8 Semestres) en el Departamento de Idiomas. Facultad de Medicina U.A.N.L.<br>
+								<br>
+								IV Curso Internacional de Gastroenterología. Monterrey N.L, México. (1986)<br>
+								<br>
+								III Curso de Actualización en Medicina Interna. septiembre 1988. Monterrey N.L,
+								México.<br>
+								<br>
+								V Curso de Actualización en Medicina Interna, organizado por la Asociación de
+								Medicina Interne de Nuevo Lean A.C. (1991)<br>
+								<br>
+								Curso sobre Hormona de Crecimiento y Factores de Crecimiento, realizado en
+								Göetborg, Suecia (1998)<br>
+								<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Congresos:</div>
+						<div class="column is-7">
+							<p>
+								I Congreso Científico de Diabetes. Monterrey N.L., México. (1988)<br>
+								<br>
+								II Congreso Científico de Diabetes. Lean, Gto., México. (1989)<br>
+								<br>
+								III Congreso Anual de la Federaci6n de Asociaciones Mexicanas de Diabetes, A.C. Guadalajara, Jal., México. (1990)<br>
+								<br>
+								14vo. Congreso de la Federaci6n Internacional de Diabetes. Washington, D.C., USA. (1991)<br>
+								<br>
+								XV Congreso de la Federación Internacional de Diabetes, Kobe, Japan. (1994)<br>
+								<br>
+								XVI Congreso de la Federación Internacional de Diabetes, Helsinki, Finlandia. (1997)<br>
+								<br>
+								XIV Congreso Panamericano de Endocrinología, Cancún, Q. Roo (1997)<br>
+								<br>
+								Congreso Internacional de la Fundación Nacional de Osteoporosis, Washington, D.C. (1994)<br>
+								<br>
+								Congreso de la Asociación Americana de Diabetes, San Diego, California (1999)<br>
+								<br>
+								Congresista en el Simposium de Renoprotec, Nuevo Vallarta (2005)<br>
+								<br>
+								Congresista en el Serono Symposia International, Ciudad de México, D.F. (2006)<br>
+								<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Simposiums:</div>
+						<div class="column is-7">
+							<p>
+								Simposium Internacional sobre Función Celular y Enfermedad. Monterrey N.L, México. (1988)<br>
+								<br>
+								Simposium sobre Hipertension Arterial. Monterrey N.L., México. (1988)<br>
+								<br>
+								Simposium sobre Avances Recientes en Infectología. Monterrey N.L., México. (1988)<br>
+								<br>
+								Simposium sobre "Enfermedades de la Segunda Mitad de la Vida". Monterrey N.L. (1989)<br>
+								<br>
+								20vo. Simposium Internacional sobre Hormona de Crecimiento y Factores de Crecimiento en Endocrinología y Metabolismo, Boston, Massachusetts, (1999)<br>
+								<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Encuentros:</div>
+						<div class="column is-7">
+							<p>
+								VI Encuentro Regional de Investigación Biomédica. Facultad de Medicina, UA.N.L. Monterrey N.L, México. (1988)<br>
+								<br>
+								VII Encuentro Regional de Investigación Biomédica. Facultad de Medicina, U.A.N.L. Monterrey N.L. (1989)<br>
+								<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Reuniones:</div>
+						<div class="column is-7">
+							<p>
+								
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold"></div>
+						<div class="column is-7">
+							<p>
+								XXVIII Reuni6n Anual de la Sociedad Mexicana de Nutrici6n y Endocrinología. Guanajuato Gto. México. (1988)<br>
+								<br>
+								XXIX Reunión Anual de la Sociedad Mexicana de Nutrición y Endocrinología. Acapulco, Gro., México. (1989)<br>
+								<br>
+								XXXII Reunión Anual de la Sociedad Mexicana de Nutrición y Endocrinología, A.C., Acapulco, Gro. (1992)<br>
+								<br>
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Tópicos:</div>
+						<div class="column is-7">
+							<p>
+								Tópicos Selectos en Endocrinología. Clínica Nova y Clínica Cuauhtémoc y Famosa. Monterrey N.L., México. (1989)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Coloquio:</div>
+						<div class="column is-7">
+							<p>
+								Coloquio sobre "Las Dislipidemias como Factor de Riesgo Cardiovascular" Monterrey, N.L. (1989)
+							</p>
+						</div>
+
+						<div class="column is-2 is-offset-2 bold">Conferencista:</div>
+						<div class="column is-7">
+							<p>
+								II Jornadas Medicas de la Asociación de Médicos de Sabinas Hidalgo, N.L. (2005)
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="endocrinologia">
+		<section class="hero is-primary">
+		  <div class="hero-body">
+		    <div class="container">
+		      <h1 class="title">
+		        <span class="bold">Endocrinología</span>
+		      </h1>
+		      <h2 class="subtitle">
+		        <a href="#">Inicio</a> > Endocrinología
+		      </h2>
+		    </div>
+		  </div>
+		</section>
+		<div class="columns white-fill">
+			<div class="column is-10 is-offset-1">
+				<p>La endocrinología es la rama de la medicina que estudia y trata los problemas hormnoales, así como los trastornos del metabolismo y de las glándulas de secreción interna, incluyendo padeciminetos hereditarios, congénitos (de nacimiento) y adquiridos durante el crecimiento y desarrollo del organísmo humano.</p>
+				<br>
+				<p>Es una especialidad que con el paso del tiempo ha generado un lugar preponderante, ya que cada vez se descubren nuevas y fascinantes hormonas, que se porducen en órganos no catalogados como glándulas y que actúan en todas partes del cuerpo humano, incluso con acciones y efectos a distancia, dado que estas hormonas se producen en un sitio y actúan en otros órganos y sistemas.
+				</p>
+
+				<h5 class="subtitle is-5 blue-font">PADECIMIENTOS QUE TRATA</h5>
+				<ul>
+					<li>Diabetes</li>
+					<li>Enfermedades de la Tiroides</li>
+					<li>Metabolismo y Nutrición</li>
+					<li>Trastornos Hormonales</li>
+					<li>Problemas del Crecimiento y Desarrollo</li>
+					<li>Biología de la Reproducción</li>
+				</ul>
+			</div>
+		</div>
+		<div class="columns gray-fill">
+			<div class="column is-5 is-offset-1">
+				<h5 class="subtitle is-5 blue-font">¿CON QUÉ OTRAS ESPECIALIDADES SE RELACIONA?</h5>
+				<p>Está intimamente relacionada a todas las demás especialidades y ramas de la medicina, ya que el papel que juegan las hormonas está presente en el metabolismo y en el desarrollo de todas las etapas del ser humano: concepción, vida embrionaría y fetal, lactancía, infancía, adolescencía, adultez, reproducción, embarazo, tercera edad y vejez.</p>
+				<br>
+
+				<h5 class="subtitle is-5 blue-font">NUTRICIÓN</h5>
+				<p>La obesidad es un imán para las enfermedades crónico-degenerativas como: diabetes, hipertensión arterial, aterosclerosis, aumento de las grasas y colesterol en la sangre, hernias, cálculos en la vesícula biliar, embolias, infartos al corazón, entre otras.</p>
+				<br>
+				<p>Trastornos hormonales o endorcrinológicos podrían estar impidiendo el descenso de peso adecuado, por lo que la evaluación endocrinológica especializada es importante al inicio o durante el tratamiento de la obesidad.</p>
+			</div>
+			<div class="column dark-gray-fill">
+				<div class="padding-left">
+					<h3 class="subtitle is-3 gray-font">VIDEOS <span class="bold">RELACIONADOS</span></h3>
+					<div class="video columns">
+						<div class="column is-3 thumbnail">
+							<a href="">
+								<img src="img/video1.png" alt="">
+							</a>
+						</div>
+						<div class="column is-3 videotitle">
+							<p>Medicina Antienvejecimiento</p>
+						</div>
+					</div>
+					<div class="video columns">
+						<div class="column is-3 thumbnail">
+							<a href="">
+								<img src="img/video2.png" alt="">
+							</a>
+						</div>
+						<div class="column is-3 videotitle">
+							<p>Hormona de Crecimiento en Adultos</p>
+						</div>
+					</div>
+					<h3 class="subtitle is-3 gray-font">MEDICINA <span class="bold">ANTIEDAD</span></h3>
+					<p>Conoce nuestro sitio dirigido a la medicina antiedad</p>
+					<a href="" class="blue-font">VISITAR EL SITIO</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contacto">
+		<section class="hero is-primary">
+		  <div class="hero-body">
+		    <div class="container">
+		      <h1 class="title">
+		        <span class="bold">Contacto</span>
+		      </h1>
+		      <h2 class="subtitle">
+		        <a href="#">Inicio</a> > Contacto
+		      </h2>
+		    </div>
+		  </div>
+		</section>
+		<div class="white-fill">
+			<div class="info column is-10 is-offset-1">
+				<p>El Dr. Lozano con gusto te proporcionará el mejor tratamiento para cualquier que sea tu caso buscando tu satisfacción personal. Utiliza este medio para solicitar algún servicio o información que sea de tu interés.</p>
+			</div>
+			<div class="columns gray-fill">
+				<div class="column is-5 is-offset-1">
+					<form class="form" action="https://formspree.io/alejandro.valdesval@gmail.com" method="POST">
+						<div class="control is-horizontal">
+							<div class="control-label">
+								<label class="label">Nombre</label>
+							</div>
+							<div class="control">
+								<input class="input" type="text" placeholder="José Martínez Acosta" name="name">
+							</div>
+						</div>
+						<div class="control is-horizontal">
+							<div class="control-label">
+								<label class="label">Telefono</label>
+							</div>
+							<div class="control">
+								<input class="input" type="tel" placeholder="83 65 42 15" name="name">
+							</div>
+						</div>
+						<div class="control is-horizontal">
+							<div class="control-label">
+								<label class="label">Email</label>
+							</div>
+							<div class="control">
+								<input class="input" type="text" placeholder="jose_macosta@gmail.com" name="_replyto">
+							</div>
+						</div>
+						<div class="control is-horizontal">
+							<div class="control-label">
+								<label class="label">Mensaje</label>
+							</div>
+							<div class="control">
+								<textarea class="textarea" placeholder="Escribe tu mensaje..." name="comment"></textarea>
+							</div>
+						</div>
+						<p class="control is-pulled-right">
+							<button class="button is-success">Enviar datos</button>
+						</p>
+					</form>
+				</div>
+				<div class="column dark-gray-fill">
+					<h3 class="subtitle is-3 gray-font">INFORMACIÓN DE <span class="bold">CONTACTO</span></h3>
+					<div class="columns">
+						<div class="column is-2 is-offset-1">
+							<p><span class="bold">Dirección:</span></p>
+						</div>
+						<div class="column is-5">
+							<p>Edificio Médico Las Lomas</p>
+							<p>Dr. Guajardo 101 Desp. 201</p>
+							<p>Col. Los Doctores</p>
+							<p>Monterrey, N.L.</p>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column is-2 is-offset-1">
+							<p><span class="bold">Teléfono:</span></p>
+						</div>
+						<div class="column is-5">
+							<p>8347 5023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<p>
+			Edificio Médico Las Lomas Dr. Guajardo 101 Desp. 201 Col. Los Doctores - Doctor César Lozano &copy; 2014
+		</p>	
+	</footer>
+</body>
+</html>
+
+<script>
+	var app = new Vue({
+		el: '#tabs',
+		data: {
+			showEdu: false,
+			showSociety: false,
+			showExp: false,
+			showPub: false,
+			showCur: false
+		},
+        methods: {
+			toggleShowEdu(){
+				this.showEdu = !this.showEdu;
+			},       	
+			toggleShowSociety(){
+				this.showSociety = !this.showSociety;
+			},       		
+			toggleShowExp(){
+				this.showExp = !this.showExp;
+			},
+			toggleShowPub(){
+				this.showPub = !this.showPub;
+			},
+			toggleShowCur(){
+				this.showCur = !this.showCur;
+			},
+        }
+	});
+</script>

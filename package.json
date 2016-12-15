@@ -1,0 +1,31 @@
+{
+  "name": "drlozano",
+  "version": "1.0.0",
+  "description": "pagina web para el dr. Lozano",
+  "main": "index.js",
+  "dependencies": {
+    "bulma": "^0.2.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaganeSoft/pagina-drlozano.git"
+  },
+  "author": "hagane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaganeSoft/pagina-drlozano/issues"
+  },
+  "homepage": "https://github.com/HaganeSoft/pagina-drlozano#readme",
+  "keywords": [
+    "dr.",
+    "Cesar",
+    "Lozano"
+  ]
+}
